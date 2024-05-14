@@ -35,11 +35,18 @@ class Param {
         paramInstances.push(this)
     }
     setValue(x) {
+        if (this.value == x ) { return }
         if(this.name == "hgbDate" || this.name == "ferDate") {
            return this.outputs.texts.forEach((text) => {
             text.innerText =  x.split("-").reverse().join(".")
         })}
-        if (this.value == x ) { return }
+        if(this.name == "ertPk"  || this.name == "drbPk") {
+            console.log("pk");
+            this.outputs.all.forEach((el) => {
+            el?.animate([{filter: "brightness(0.5)"},{filter: "brightness(1.0)"}],{duration: 500})
+           }) 
+        }
+
         if (Number.isNaN(x) ) { return console.log("Nani!") }
         x = Number.isNaN(x - 0) ? x : (x - 0);
         this.value = x;
@@ -62,9 +69,9 @@ let hgb = new Param("hgb", 10, undefined, { min: 5, max: 12, step: 0.1})
 let hgbDate = new Param("hgbDate", currentDate, undefined, { min: sixMonthsB4, max: currentDate })
 let kg = new Param("kg", 50, { decimals: 2 }, { min: 20, max: 150, step: 0.5})
 let ert = new Param("ert", 7500, { decimals: 2 }, { min: 75 * 20, max: 150 * 150, step: 75})
-let ertPk = new Param("ertPk", 150, undefined, { min: 75, max: 150, step: 75})
+let ertPk = new Param("ertPk", 150, undefined, { min: 0, max: 150, step: 75})
 let drb = new Param("drb", 37.5, { decimals: 4 }, { min: 0.35, max: 0.75 * 150, step: 0.35})
-let drbPk = new Param("drbPk", 0.75, undefined, { min: 0.35, max: 0.75, step: 0.40})
+let drbPk = new Param("drbPk", 0.75, undefined, { min: 0.00, max: 0.75, step:0.05})
 let fer = new Param("fer", 0, undefined, { min: 1, max: 1500, step: 1})
 let ferDate = new Param("ferDate", currentDate,undefined,{ min: sixMonthsB4, max: currentDate })
 

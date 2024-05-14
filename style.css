@@ -1,6 +1,7 @@
 /*#region ---------- ----------* MY CONFIG *---------- ---------- ----- */
 html {
     font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #eaeaea;
     color: #111;
 }
@@ -16,78 +17,91 @@ section,
 div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin: auto;
+    width: 100%;
 }
-main {
-    height: 100dvh;
-    position: relative;
-
-    & section {
-        width: 100%;
-    }
+div {
+    /* width: unset; */
 }
 /* *For Development */
 /*#endregion ---------------------* MY CONFIG *--------------------------- */
 /*#region ---------------------* MAIN *--------------------------- */
 
+
 main {
-    width: min(100%, 1200px);
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-
+    max-width: 1000px;
+    position: relative;
+    justify-content: flex-start;
 }
-
-.hgb {
-    color: hsl(345, 100%, 50%);
-    accent-color:  hsl(345, 100%, 50%);
+.box {
+    background-color: hsl(0, 0%, 97%);
+    max-width: 800px;
+    width: 100%;
+    flex-wrap: wrap;
+    & .pNumWrap {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        & h6 {
+            text-transform: capitalize;
+        }
+        .inputwLabel {
+            & input {
+                /* number */
+                height: 100%;
+            }
+        }
+    }
+    & .inputwLabel {
+        & input {
+            /* range */
+            width: 84%;
+            min-width: 240px;
+            max-width: 480px;
+        }
+    }
 }
-.hgbDate {
+.write {
+    & .sentence {
+        align-items: center;
+        flex-flow: row wrap;
+    }
+    & span {
+        &.stc {
+            opacity: 0.5;
+        }
+    }
+}
+.inputwLabel {
+    width: unset;
+}
+.inputwLabel label {
+    display: none;
+}
+.ertPk, .drbPk {
+    /* display: none; */
+}
+/* ----- ---------- ----------* colors *---------- ---------- ----- */
+.hgb, .hgbDate {
     color: hsl(345, 100%, 50%);
-    accent-color:  hsl(345, 100%, 50%);
+    accent-color: hsl(345, 100%, 50%);
 }
 .kg {
     color: hsl(210, 100%, 50%);
-    accent-color:  hsl(210, 100%, 50%);
+    accent-color: hsl(210, 100%, 50%);
 }
-.ert {
-        color: hsl(265, 100%, 50%);
-    accent-color:  hsl(265, 100%, 50%);
+.ert, .ertPk {
+    color: hsl(265, 100%, 50%);
+    accent-color: hsl(265, 100%, 50%);
 }
-.ertPk {
-        color: hsl(265, 100%, 50%);
-    accent-color:  hsl(265, 100%, 50%);
+.drb, .drbPk {
+    color: hsl(280, 100%, 50%);
+    accent-color: hsl(280, 100%, 50%);
 }
-.drb {
-        color: hsl(280, 100%, 50%);
-    accent-color:  hsl(280, 100%, 50%);
+.fer, .ferDate {
+    color: hsl(315, 100%, 35%);
+    accent-color: hsl(315, 100%, 35%);
 }
-.drbPk {
-        color: hsl(280, 100%, 50%);
-    accent-color:  hsl(280, 100%, 50%);
-}
-.fer {
-        color: hsl(315, 100%, 35%);
-    accent-color:  hsl(315, 100%, 35%);
-}
-.ferDate {
-        color: hsl(315, 100%, 35%);
-    accent-color:  hsl(315, 100%, 35%);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*#endregion ---------------------* MAIN *--------------------------- */
 /*#region ---------------------* MEDIA *--------------------------- */
 @media screen and (width > 720px) {
@@ -121,10 +135,10 @@ body * {
 }
 #devBordersButton {
     background-color: red;
-    height: 1rem;
-    width: 1rem;
-    opacity: 0.5;
-    position: absolute;
+    height: 8dvh;
+    width: 8dvh;
+    opacity: 0.2;
+    position: fixed;
     top: 0;
     right: 0;
 }
