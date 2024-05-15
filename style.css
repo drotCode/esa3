@@ -2,8 +2,15 @@
 html {
     font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #eaeaea;
-    color: #111;
+    --texColor: #111;
+    --bgColor: hsl(0, 0%, 92%);
+    --hgbColor: hsl(345, 100%, 50%);
+    --kgColor: hsl(210, 100%, 50%);
+    --ertColor: hsl(265, 100%, 50%);
+    --drbColor: hsl(280, 100%, 50%);
+    --ferColor: hsl(315, 100%, 35%);
+
+    background-color: var(--bgColor);
 }
 body {
     min-height: 100dvh;
@@ -22,64 +29,113 @@ div {
     width: 100%;
 }
 div {
-    /* width: unset; */
+    width: unset;
+}
+span {
+    display: inline-block;
+}
+input {
+    background-color: hsl(0, 0%, 98%);
 }
 /* *For Development */
 /*#endregion ---------------------* MY CONFIG *--------------------------- */
 /*#region ---------------------* MAIN *--------------------------- */
-
-
 main {
     max-width: 1000px;
     position: relative;
     justify-content: flex-start;
+    margin: auto;
+    /* padding: 0 0.25rem; */
+}
+.boxGroup1, .boxGroup2 {
+    padding: 1rem 0rem;
+    max-width: 720px;
+    row-gap: 0.25rem;
 }
 .box {
-    background-color: hsl(0, 0%, 97%);
-    max-width: 800px;
+    flex-flow: row wrap;
     width: 100%;
-    flex-wrap: wrap;
-    & .pNumWrap {
-        flex-flow: row wrap;
-        justify-content: space-between;
-        & h6 {
-            text-transform: capitalize;
-        }
-        .inputwLabel {
-            & input {
-                /* number */
-                height: 100%;
-            }
+    justify-content: center;
+    & .titleWrap {
+        width: 6.25rem;
+        align-items: start;
+        & p {
+            text-align: left;
+            width: 100%;
         }
     }
-    & .inputwLabel {
+    & .numberWrap {
+        width: 6rem;
+        align-items: start;
         & input {
-            /* range */
-            width: 84%;
-            min-width: 240px;
-            max-width: 480px;
+            height: 1.6rem;
+            width: 100%;
         }
     }
+    & .rangeWrap {
+        width: 80%;
+        max-width: 400px;
+        & input {
+            width: 90%;
+        }
+    }
+}
+input[type=date] {
+    height: 2rem;
+    width: 8rem;
+}
+.dates {
+    justify-content: start;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.dateBox {
+    /* flex-flow: row; */
+    flex-grow: 1;
 }
 .write {
-    & .sentence {
-        align-items: center;
-        flex-flow: row wrap;
+    width: min(98%,800px);
+    & p {
+        padding:2px;
+        text-align: left;
     }
-    & span {
-        &.stc {
-            opacity: 0.5;
+    & .stc {
+        /* font-size: 0.9rem; */
+    }
+    & section {
+        display: flex;
+        flex-flow: row;
+        justify-content: start;
+    }
+    .paramtext {
+        span& {
+            font-weight: 600;
+            background-color: hsl(0, 0%, 92%);
+        }
+        .fer& {
+            width: 3.5rem;
+        }
+        .ferDate& {
+            width: 5rem;
+        }
+        .hgb& {
+            width: 2rem;
+        }
+        .hgbDate& {
+            width: 5.2rem;
+        }
+        .kg& {
+            width: 2.5rem;
+        }
+        &.drbPk, &.ertPk {
+            width: 2.5rem;
         }
     }
 }
-.inputwLabel {
-    width: unset;
-}
-.inputwLabel label {
-    display: none;
-}
-.ertPk, .drbPk {
-    /* display: none; */
+.bordered {
+    margin-top: 0.25rem;
+    border: 3px solid currentColor;
 }
 /* ----- ---------- ----------* colors *---------- ---------- ----- */
 .hgb, .hgbDate {
@@ -102,44 +158,44 @@ main {
     color: hsl(315, 100%, 35%);
     accent-color: hsl(315, 100%, 35%);
 }
+.plain {
+    color: #111;
+}
 /*#endregion ---------------------* MAIN *--------------------------- */
 /*#region ---------------------* MEDIA *--------------------------- */
 @media screen and (width > 720px) {
     html {}
+    main {
+        pad: 0 0rem;
+    }
 }
 @media screen and (width > 1000px) {
     html {}
+    main {}
 }
 @media screen and (width > 1200px) {
     html {
-        font-size: 18px;
+        /* font-size: 18px; */
     }
+    main {}
 }
 @media screen and (width > 1600px) {
     html {}
+    main {}
 }
 /*#endregion ---------------------* MEDIA *--------------------------- */
 /* -------------------------------------------------------------------------- */
 /*#region ---------------------* UTILS *--------------------------- */
+.hiddenF, .labelInput label, .ertPk.box, .drbPk.box {
+    display: none !important;
+}
 .hidden {
     display: none;
 }
 .row {
     flex-direction: row;
 }
+/*#endregion ---------------------* UTILS *--------------------------- */
 body * {
     /* border: 1px dotted red; */
 }
-.devBorders {
-    border: 1px dotted red;
-}
-#devBordersButton {
-    background-color: red;
-    height: 8dvh;
-    width: 8dvh;
-    opacity: 0.2;
-    position: fixed;
-    top: 0;
-    right: 0;
-}
-/*#endregion ---------------------* UTILS *--------------------------- */

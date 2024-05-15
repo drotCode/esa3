@@ -1,6 +1,31 @@
 
 
 
+// const playBright = (el) => {
+//     el?.animate([{ filter: "brightness(0.5)" }, { filter: "brightness(1.0)" }], { duration: 300 })
+// }
+
+
+ &.ertPk, &.drbPk {
+        &, :disabled {
+            background-color: #111;
+            
+        }
+        position: fixed;
+        & .boxRow1 {
+            justify-content: center;
+        }
+        & .boxRow2 {
+            & input {
+                /* range */
+                width: 140px;
+                min-width: 120px;
+                max-width: 160px;
+            }
+        }
+    }
+
+
 
         if (/.+-.+-.+/.test(x)) 
 

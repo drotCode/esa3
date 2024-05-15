@@ -1,7 +1,6 @@
 <!--#region HEAD -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,163 +12,131 @@
 </head>
 <!--endregion -->
 <!-- const paramWords = ["hgb", "hgbDate", "kg", "ert","ertPk", "drb", "drbPk", "fer","ferDate"] -->
-
 <body>
-
     <nav></nav>
-
     <main>
-
         <article class="boxes">
-
             <section class="boxGroup1">
-
                 <div class="hgb box">
-                    <div class="pNumWrap">
-                        <p>hgb</p>
-                        <div class="inputwLabel">
-                            <label for="hgbInpNum">hgbInpNum</label>
-                            <input class="hgb" type="number" name="hgbInpNum" id="hgbInpNum">
-                        </div>
+                    <div class="titleWrap">
+                        <p class="title">hgb</p>
                     </div>
-
-                    <div class="inputwLabel">
+                    <div class="numberWrap labelInput ">
+                        <label for="hgbInpNum">hgbInpNum</label>
+                        <input class="hgb" type="number" name="hgbInpNum" id="hgbInpNum">
+                    </div>
+                    <div class="rangeWrap labelInput ">
                         <label for="hgbInpRan">hgbInpRan</label>
                         <input class="hgb" type="range" name="hgbInpRan" id="hgbInpRan">
                     </div>
-
                 </div>
-
                 <div class="kg box">
-                    <div class="pNumWrap">
-                        <p>kg</p>
-                        <div class="inputwLabel">
-                            <label for="kgInpNum">kgInpNum</label>
-                            <input class="kg" type="number" name="kgInpNum" id="kgInpNum">
-                        </div>
+                    <div class="titleWrap">
+                        <p class="title">kg</p>
                     </div>
-
-                    <div class="inputwLabel">
+                    <div class="numberWrap labelInput ">
+                        <label for="kgInpNum">kgInpNum</label>
+                        <input class="kg" type="number" name="kgInpNum" id="kgInpNum">
+                    </div>
+                    <div class="rangeWrap labelInput ">
                         <label for="kgInpRan">kgInpRan</label>
                         <input class="kg" type="range" name="kgInpRan" id="kgInpRan">
                     </div>
-
                 </div>
-
                 <div class="ert box">
-                    <div class="pNumWrap">
-                        <p>eritropoetin</p>
-                        <div class="inputwLabel">
-                            <label for="ertInpNum">ertInpNum</label>
-                            <input class="ert" type="number" name="ertInpNum" id="ertInpNum">
-                        </div>
+                    <div class="titleWrap">
+                        <p class="title">eritropoetin</p>
                     </div>
-
-                    <div class="inputwLabel">
+                    <div class="numberWrap labelInput ">
+                        <label for="ertInpNum">ertInpNum</label>
+                        <input class="ert" type="number" name="ertInpNum" id="ertInpNum">
+                    </div>
+                    <div class="rangeWrap labelInput ">
                         <label for="ertInpRan">ertInpRan</label>
                         <input class="ert" type="range" name="ertInpRan" id="ertInpRan">
                     </div>
-
                 </div>
-
                 <div class="drb box">
-                    <div class="pNumWrap">
-                        <p>darbepoetin</p>
-                        <div class="inputwLabel">
-                            <label for="drbInpNum">drbInpNum</label>
-                            <input class="drb" type="number" name="drbInpNum" id="drbInpNum">
-                        </div>
+                    <div class="titleWrap">
+                        <p class="title">darbepoetin</p>
                     </div>
-
-                    <div class="inputwLabel">
+                    <div class="numberWrap labelInput ">
+                        <label for="drbInpNum">drbInpNum</label>
+                        <input class="drb" type="number" name="drbInpNum" id="drbInpNum">
+                    </div>
+                    <div class="rangeWrap labelInput ">
                         <label for="drbInpRan">drbInpRan</label>
                         <input class="drb" type="range" name="drbInpRan" id="drbInpRan">
                     </div>
-
                 </div>
-
                 <div class="ertPk box">
-                    <div class="pNumWrap">
-                        <p>eritropoetin/kg</p>
-                        <div class="inputwLabel">
-                            <label for="ertPkInpNum">ertPkInpNum</label>
-                            <input class="ertPk" type="number" name="ertPkInpNum" id="ertPkInpNum" disabled>
-                        </div>
+                    <div class="titleWrap">
+                        <p class="title">eritropoetin/kg</p>
                     </div>
-
-                    <div class="inputwLabel">
+                    <div class="numberWrap labelInput ">
+                        <label for="ertPkInpNum">ertPkInpNum</label>
+                        <input class="ertPk" type="number" name="ertPkInpNum" id="ertPkInpNum" disabled>
+                    </div>
+                    <div class="rangeWrap labelInput ">
                         <label for="ertPkInpRan">ertPkInpRan</label>
                         <input class="ertPk" type="range" name="ertPkInpRan" id="ertPkInpRan" disabled>
                     </div>
-
                 </div>
-
                 <div class="drbPk box">
-                    <div class="pNumWrap">
-                        <p>darbepoetin/kg</p>
-                        <div class="inputwLabel">
-                            <label for="drbPkInpNum">drbPkInpNum</label>
-                            <input class="drbPk" type="number" name="drbPkInpNum" id="drbPkInpNum" disabled>
-                        </div>
+                    <div class="titleWrap">
+                        <p class="title">darbepoetin/kg</p>
                     </div>
-
-                    <div class="inputwLabel">
+                    <div class="numberWrap labelInput ">
+                        <label for="drbPkInpNum">drbPkInpNum</label>
+                        <input class="drbPk" type="number" name="drbPkInpNum" id="drbPkInpNum" disabled>
+                    </div>
+                    <div class="rangeWrap labelInput ">
                         <label for="drbPkInpRan">drbPkInpRan</label>
                         <input class="drbPk" type="range" name="drbPkInpRan" id="drbPkInpRan" disabled>
                     </div>
-
                 </div>
             </section>
-
             <section class="boxGroup2">
-
                 <div class="fer box">
-
-                    <div class="pNumWrap">
-                        <p>ferritin</p>
-                        <div class="inputwLabel">
-                            <label for="ferInpNum">ferInpNum</label>
-                            <input class="fer" type="number" name="ferInpNum" id="ferInpNum">
-                        </div>
+                    <div class="titleWrap">
+                        <p class="title">ferritin</p>
                     </div>
-
-                    <div class="inputwLabel">
+                    <div class="numberWrap labelInput ">
+                        <label for="ferInpNum">ferInpNum</label>
+                        <input class="fer" type="number" name="ferInpNum" id="ferInpNum">
+                    </div>
+                    <div class="rangeWrap labelInput ">
                         <label for="ferInpRan">ferInpRan</label>
                         <input class="fer" type="range" name="ferInpRan" id="ferInpRan">
                     </div>
-
                 </div>
-
-                <div class="ferDate box">
-                    <div class="pNumWrap">
-                        <p>ferritin tarih</p>
-                        <div class="inputwLabel">
+                <div class="dates">
+                    <div class="ferDate box dateBox">
+                        <div class="titleWrap">
+                            <p class="title">ferritin tarih</p>
+                        </div>
+                        <div class="dateWrap labelInput ">
                             <label for="ferDateInpDate">ferDateInpDate</label>
                             <input class="ferDate" type="Date" name="ferDateInpDate" id="ferDateInpDate">
                         </div>
                     </div>
-
-                </div>
-
-                <div class="hgbDate box">
-                    <div class="pNumWrap">
-                        <p>hgb tarih</p>
-                        <div class="inputwLabel">
+                    <div class="hgbDate box dateBox">
+                        <div class="titleWrap">
+                            <p class="title">hgb tarih</p>
+                        </div>
+                        <div class="dateWrap labelInput ">
                             <label for="hgbDateInpDate">hgbDateInpDate</label>
                             <input class="hgbDate" type="Date" name="hgbDateInpDate" id="hgbDateInpDate">
                         </div>
                     </div>
-
                 </div>
             </section>
-
         </article>
-
         <article class="write">
-
             <section class="ert">
-                <p class="ert">
-                    <span class="stc">Feritin:</span>
+                <p class="ert bordered">
+
+                    <span class="stc">Ferritin:</span>
                     <span class="fer paramtext">lorem</span>
                     <span class="stc"> &lpar;</span>
                     <span class="ferDate paramtext">lorem</span>
@@ -183,39 +150,31 @@
                     <span class="kg paramtext">lorem</span>
                     <span class="stc">kg olup</span>
                     <span class="ertPk paramtext">lorem</span>
-                    <span class="stc">IU/kg/hafta dozundan</span>
+                    <span class="stc">IU/kg/hafta</span>
+                    <span class="stc">dozundan</span>
                     <span class="stc">tedavisi uygundur.</span>
-
                 </p>
             </section>
-
-            <section class="drb">
+            <section class="drb bordered">
                 <p class="drb">
-                    <span class="stc">Feritin:</span>
+                    <span class="stc">Ferritin:</span>
                     <span class="fer paramtext">lorem</span>
-                    <span class="stc"> &lpar;</span>
-                    <span class="ferDate paramtext">lorem</span>
-                    <span class="stc">&rpar;. </span>
+                    <span class="stc">&lpar;</span><span class="ferDate paramtext">lorem</span><span class="stc">&rpar;. </span>
                     <span class="stc">Hgb:</span>
                     <span class="hgb paramtext">lorem</span>
-                    <span class="stc"> &lpar;</span>
-                    <span class="hgbDate paramtext">lorem</span>
-                    <span class="stc">&rpar;. </span>
+                    <span class="stc"> &lpar;</span><span class="hgbDate paramtext">lorem</span><span class="stc">&rpar;. </span>
                     <span class="stc">Hastanın kuru kilosu </span>
                     <span class="kg paramtext">lorem</span>
                     <span class="stc">kg olup</span>
                     <span class="drbPk paramtext">lorem</span>
-                    <span class="stc">mcg/kg/hafta dozundan</span>
+                    <span class="stc">mcg/kg/hafta</span>
+                    <span class="stc">dozundan</span>
                     <span class="stc">tedavisi uygundur.</span>
                 </p>
             </section>
-
         </article>
-
     </main>
-
     <footer></footer>
-    <button id="devBordersButton">-</button>
-</body>
 
+</body>
 </html>
